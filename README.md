@@ -1,7 +1,6 @@
-# 🐏 Ollama AI Setup Guide (Ubuntu)
+# Ollama AI Setup Guide (Ubuntu 24.04 – Predator Server)
 
-![Ollama Banner](https://ollama.com/assets/images/ollama-banner.png)
-
+![Ollama AI](https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/Artificial_Intelligence_logo.svg/800px-Artificial_Intelligence_logo.svg.png)
 > 🌟 **World's most complete guide to install and run Ollama AI locally on Ubuntu!**  
 
 ---
@@ -13,9 +12,27 @@
 
 ---
 
+## 🖥️ System Requirements
+
+- Ubuntu 24.04 LTS (Server or Desktop)
+- Minimum 8GB RAM recommended
+- Docker installed for Web UI integration
+- Stable Internet connection
+
+![Ubuntu](https://assets.ubuntu.com/v1/29985a98-ubuntu-logo32.png)  
+![Docker](https://www.docker.com/sites/default/files/d8/2019-07/Moby-logo.png)
+
+---
+
 ## 1️⃣ Install Ollama CLI
 
 Official binaries are available for Linux.
+
+### Step 1: Download & Install Ollama
+
+```bash
+curl -fsSL https://ollama.com/install.sh | sh
+
 
 ### Step 1: Download & Install Ollama
 
