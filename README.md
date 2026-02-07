@@ -1,4 +1,8 @@
 # Ollama AI Setup Guide (Ubuntu 24.04 – Predator Server)
+**Raja Ramees**  
+🔥 AI & DevOps Enthusiast  
+🔗 [LinkedIn](https://www.linkedin.com/in/raja-ramees-804a7b262/)  
+🌐 [readyairesources.com](https://readyairesources.com/)
 
 ![Ollama Logo](https://logo.svgcdn.com/simple-icons/ollama-dark.png)
 ![Docker Logo](https://logo.svgcdn.com/logos/docker.svg)
