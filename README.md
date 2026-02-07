@@ -1,7 +1,7 @@
 # Ollama AI Setup Guide (Ubuntu 24.04 – Predator Server)
 
-![Ollama Logo](https://seeklogo.com/images/O/ollama-logo-593420.png)
-![Docker Logo](https://cdn.clipart.email/5b14a8e44b41dcb877e45ef0e4cf263e_docker-logo-png-docker-logo-transparent-png-image_512.png)
+![Ollama Logo](https://logo.svgcdn.com/simple-icons/ollama-dark.png)
+![Docker Logo](https://logo.svgcdn.com/logos/docker.svg)
 
 > 🌟 **World’s most complete guide to install and run Ollama AI locally on Ubuntu!**
 
