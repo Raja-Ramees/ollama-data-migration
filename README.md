@@ -78,16 +78,74 @@ sudo nano /etc/systemd/system/ollama.service
 Paste the following:
 
 [Unit]
-Description=Ollama AI Server
-After=network.target
+Description=Ollama Service
+After=network-online.target
 
 [Service]
-User=YOUR_USERNAME
 ExecStart=/usr/local/bin/ollama serve
+User=ollama
+Group=ollama
 Restart=always
+RestartSec=3
+Environment="PATH=/usr/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin"
+#Environment=""OLLAMA_HOST=0.0.0.0:11434" #note this line is comment on predator
 
-[Install]
-WantedBy=multi-user.target
+#What is this file?
+/etc/systemd/system/ollama.service.d/override.conf
+
+
+This is a systemd override file.
+
+Its purpose is to modify or extend the behavior of an existing systemd service without editing the original service file.
+
+Original service file:
+
+/etc/systemd/system/ollama.service
+
+
+Override file:
+
+/etc/systemd/system/ollama.service.d/override.conf
+
+
+Systemd merges both files when starting the service.
+
+What does this line mean?
+[Service]
+Environment="OLLAMA_HOST=0.0.0.0:11434"
+
+
+This tells Ollama:
+
+“Listen on all network interfaces on port 11434, not just localhost.”
+
+That’s why you now see:
+
+*:11434
+
+
+when you run:
+
+ss -tulnp | grep 11434
+
+Browser
+  ↓ 11437
+Open-WebUI (Docker)
+  ↓ 11434
+Ollama (Host OS)
+  ↓
+Models
+
+
+
+This is exactly what we wanted so that Open-WebUI (running in Docker) can reach Ollama.
+raja@ready-Predator-PO3-620:~$ sudo cat /etc/systemd/system/ollama.service.d/override.conf
+[sudo] password for raja:
+[Service]
+Environment="OLLAMA_HOST=0.0.0.0:11434"
+
+raja@ready-Predator-PO3-620:~$
+
 
 
 Enable & start the service:
